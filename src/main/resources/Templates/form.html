@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>INGRESAR VEHICULO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+<body style="background: #c31432;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+<div class="container my-5">
+    <div class="row">
+        <div class="position-relative">
+            <div class="position-absolute top-0 start-50 translate-middle-x ">
+                <h1 class="text-info-emphasis bg-white" >FAZA INGENIERIA S.A.S</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container ">
+    <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 bg-white py-4"  style="background: #ADA996;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+            <form>
+                <div>
+                    <div>
+                        <div>
+                            <h3 class="text-info-emphasis">Ingreso de vehiculo</h3>
+                        </div>
+                        <div class="my-2">
+                            <div>
+                                <label class="text-info-emphasis">ID</label>
+                                <input type="number" class="form-control">
+                            </div>
+                            <div>
+                                <label class="text-info-emphasis">PROPIETARIO</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div>
+                                <label class="text-info-emphasis" >TELEFONO</label>
+                                <input type="number" class="form-control">
+                            </div>
+                            <div>
+                                <label class="text-info-emphasis">MODELO DEL VEHICULO</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-outline-success" type="button">Guardar</button>
+                            <button class="btn btn-outline-secondary" type="button">Limpiar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 py-4 " style="background: #ADA996;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+            <h3>REPORTE VEHICULAR</h3>
+            <table class="table table-dark table-striped" border="2">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>PROPIETARIO</th>
+                    <th>TELEFONO</th>
+                    <th>MODELO DE VEHICULO</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <tr>
+                    <td>123123</td>
+                    <td>Miguel Angel</td>
+                    <td>3187834563</td>
+                    <td>Mazda 3/ 2017</td>
+                </tr>
+                <tr>
+                    <td>123123</td>
+                    <td>Miguel andres</td>
+                    <td>3187834563</td>
+                    <td>Mazda 2/ 2017</td>
+                </tr>
+                <tr>
+                    <td>123123</td>
+                    <td>alonso Angel</td>
+                    <td>3187834563</td>
+                    <td>bmw e36/ 2017</td>
+                </tr>
+                    <td>
+                        <a class="btn btn-outline-warning">EDITAR</a>
+                        <a class="btn btn-outline-danger">BORRAR</a>
+                        <a class="btn btn-outline-success">DIAGNOSTICO</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
