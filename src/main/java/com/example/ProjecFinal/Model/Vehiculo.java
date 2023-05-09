@@ -1,6 +1,6 @@
 package com.example.ProjecFinal.Model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,5 +19,8 @@ public class Vehiculo {
   Long id;
 
   private String modelo;
+  private String marca;
   private String diagnostico;
+  private String piezas;
+  private double costos;
 }

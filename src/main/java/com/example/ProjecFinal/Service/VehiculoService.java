@@ -6,7 +6,9 @@ import com.example.ProjecFinal.Repository.IVehiculo;
 import com.example.ProjecFinal.RepositoryService.IVehiculoService;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Collections;
 import java.util.List;
+
 
 public class VehiculoService implements IVehiculoService {
 
@@ -14,10 +16,12 @@ public class VehiculoService implements IVehiculoService {
   private IVehiculo data;
 
   @Override
-  public List<Vehiculo> listar(){return(List<Vehiculo>) data.findAll();}
+  public List<Vehiculo> listarcoche() {
+    return (List<Vehiculo>) data.findAll();
+  }
 
   @Override
-  public int save(Vehiculo v) {
+  public int savecoche(Vehiculo v) {
     int res = 0;
     Vehiculo vehiculo = data.save(v);
     if(!vehiculo.equals(null)){
@@ -27,7 +31,6 @@ public class VehiculoService implements IVehiculoService {
   }
 
   @Override
-  public void delete(Long id) {
-    data.deleteById(id);
-  }
+  public void delete(Long id){data.deleteAllById(Collections.singleton(id));}
+
 }

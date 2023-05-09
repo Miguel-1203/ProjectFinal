@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
     <style>
       body{
       background-color: #c31432;  /* fallback for old browsers */
@@ -36,27 +35,27 @@
         color: antiquewhite;
       }
     </style>
-  <title>Ingreso de vehuiculo</title>
+  <title>Diagnostico</title>
 </head>
 <body>
 
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid" >
-        <a id="Color-letra" class="navbar-brand" href="#">FORMULARIO</a>
+        <a id="Color-letra" class="navbar-brand" href="#">DIAGNOSTICO</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse derecha" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#" id="Color-letra">INICIO</a>
+              <a class="nav-link active" aria-current="page" href="index.html" id="Color-letra">INICIO</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" th:href="@{/listar}" id="Color-letra">REGISTRO</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="Color-letra">Pricing</a>
+              <a class="nav-link" th:href="@{/new}"id="Color-letra">FORMULARIO</a>
             </li>
             
           </ul>
@@ -66,25 +65,33 @@
   </header>
 
   <div class="container">
-    <form th:action="@{/save}" th:object="${persona}" method="POST">
+    <form th:action="@{/savecoche}" th:object="${vehiculo}" method="POST">
       <div>
           <div>
               <div class="centrar" id="Color-letra">
-                  <h3 class="text-info-emphasis">INGRESO DE VEHICULO</h3>
+                  <h3 class="text-info-emphasis">DIAGNOSTICO DE VEHICULO</h3>
               </div>
               <div class="centrar">
                   <div>
-                      <label id="Color-letra" class="text-info-emphasis">ID</label>
-                      <input th:field="*{id}" type="number" class="form-control">
+                      <label id="Color-letra" class="text-info-emphasis">MODELO DEL VEHICULO</label>
+                      <input th:field="*{modelo}" type="text" class="form-control">
                   </div>
                   <div>
-                      <label id="Color-letra" class="text-info-emphasis">PROPIETARIO</label>
-                      <input th:field="*{name}" type="text" class="form-control">
+                      <label id="Color-letra" class="text-info-emphasis">MARCA DEL VEHICULO</label>
+                      <input th:field="*{marca}" type="text" class="form-control">
                   </div>
                   <div>
-                      <label id="Color-letra" class="text-info-emphasis" >TELEFONO</label>
-                      <input th:field="*{cell}" type="number" class="form-control">
+                      <label id="Color-letra" class="text-info-emphasis">DAÑO ENCONTRADO O SERVICIO A REALIZAR</label>
+                      <input th:field="*{diagnostico}" type="text" class="form-control">
                   </div>
+                  <div>
+                      <label id="Color-letra" class="text-info-emphasis" >PIEZAS PARA CAMBIAR</label>
+                      <input th:field="*{piezas}" type="text" class="form-control">
+                  </div>
+                  <div>
+                    <label id="Color-letra" class="text-info-emphasis" >COSTOS DE REPARACIÓN</label>
+                    <input th:field="*{costos}"  type="number" class="form-control">
+                </div>
               </div>
               <div class="d-grid gap-2">
                   <input type="submit" value="Guardar" class="btn btn-success">
@@ -93,8 +100,6 @@
       </div>
   </form>
   </div>
-
- 
   
 </body>
 </html>

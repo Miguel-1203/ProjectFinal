@@ -21,11 +21,11 @@ public class PersonaController {
   @Autowired
   private IPersonaService service;
 
-  @GetMapping("/newReporte")
+  @GetMapping("/listar")
   public String listar(Model model){
     List<Persona> personas= service.listar();
     model.addAttribute("personas", personas);
-    return "form";
+    return "tabla";
   }
 
   @GetMapping("/new")
@@ -38,7 +38,7 @@ public class PersonaController {
   @PostMapping("/save")
   public String save(@Validated Persona p){
     service.save(p);
-    return "redirect:/reporte";
+    return "redirect:/listar";
   }
 
   @GetMapping("/editar/{id}")
@@ -51,7 +51,7 @@ public class PersonaController {
   @GetMapping("/eliminar/{id}")
   public String delete(@PathVariable Long id){
     service.delete(id);
-    return "redirect:/reporte";
+    return "redirect:/listar";
   }
 
 

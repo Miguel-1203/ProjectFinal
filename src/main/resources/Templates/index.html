@@ -1,46 +1,82 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>REPORTE</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+      body{
+      background-color: #c31432;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      ;
+      }
 
-</head>
-<body>
-<div >
+      #Titulo{
+        color: antiquewhite;
+        text-align: center;
+      }
 
-    <h1>REPORTE VEHICULAR</h1>
-    <table class="table" border="3">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>PROPIETARIO</th>
-                <th>TELEFONO</th>
-                <th>MODELO DE VEHICULO</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>123123</td>
-                <td>Miguel Angel</td>
-                <td>3187834563</td>
-                <td>Mazda 3/ 2017</td>
-            </tr>
+      .centrar{
+        text-align: center;
+      }
+
+      .derecha{
+        text-align: right;
+      }
+
+      .texto-grande{
+        font-size: 20px;
+      }
+
+      #Color-letra{
+        color: antiquewhite;
+      }
+    </style>
 
 
+  </head>
+  <body>
+    
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid" >
+          <a id="Color-letra" class="navbar-brand" href="#">INICIO</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" th:href="@{/new}" id="Color-letra">FORMULARIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{/listar}" id="Color-letra">REGISTRO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="Color-letra">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" id="Color-letra">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <h1 id="Titulo">FAZA INGENIERIA S.A.S</h1>
+    </header>
 
-            <tr>
-                <td>
-                    <a class="btn btn-warning">EDITAR</a>
-                    <a class="btn btn-danger">BORRAR</a>
-                    <a class="btn btn-success">DIAGNOSTICO</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <a class="btn btn-primary">Nuevo</a>
+    <div>
+      <h2 id="Color-letra">¿Que hacemos?</h2>
+      <p id="Color-letra">Somos una empresa encargada del mantenimiento y arreglo de coches a motor de gasolina y diesel</p>
+    </div>
 
-</div>
+    <div class="container">
+      <img src="IMG/imagen 1.jpg" alt="Imagen de empresa">
+    </div>
 
-</body>
+  </body>
 </html>
