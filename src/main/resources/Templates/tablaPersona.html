@@ -43,17 +43,17 @@
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid" >
-        <a id="Color-letra" class="navbar-brand" href="#">FORMULARIO</a>
+        <a id="Color-letra" class="navbar-brand" href="#">CREAR PERSONA</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse derecha" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html" id="Color-letra">INICIO</a>
+              <a class="nav-link active" aria-current="page" th:href="@{/inicio}"id="Color-letra">INICIO</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" th:href="@{/new}" id="Color-letra">FORMULARIO</a>
+              <a class="nav-link" th:href="@{/new}" id="Color-letra"></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" id="Color-letra">Pricing</a>
@@ -65,7 +65,7 @@
     </nav>
   </header>
 
-  <h3 id="Color-letra" class="centrar">REPORTE DE PERSONAS<PERSONAS></PERSONAS></h3>
+  <h3 id="Color-letra" class="centrar">REPORTE DE PERSONAS</h3>
   <div class="container"> 
     <table class="table table-dark table-striped" border="3">
       <thead>
@@ -86,9 +86,10 @@
           <td th:text="${persona.cell}"></td>
 
           <td class="centrar">
-              <a th:href="@{/editar/}+${persona.id}"  class="btn btn-outline-warning">EDITAR</a>
-              <a th:href="@{/eliminar/}+${persona.id}" class="btn btn-outline-danger">BORRAR</a>
+              <a th:href="@{/editarPersona/}+${persona.id}"  class="btn btn-outline-warning">EDITAR</a>
+              <a th:href="@{/eliminarPersona/}+${persona.id}" class="btn btn-outline-danger">BORRAR</a>
               <a class="btn btn-outline-success" th:href="@{/newcoche}">DIAGNOSTICO</a>
+            <a class="btn btn-outline-success" th:href="@{/savecoche}">VISTA GENERAL</a>
           </td>
       </tr>
       </tbody>

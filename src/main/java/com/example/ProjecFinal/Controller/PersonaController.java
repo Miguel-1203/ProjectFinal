@@ -21,38 +21,41 @@ public class PersonaController {
   @Autowired
   private IPersonaService service;
 
-  @GetMapping("/listar")
+  @GetMapping("/listarPersona")
   public String listar(Model model){
     List<Persona> personas= service.listar();
     model.addAttribute("personas", personas);
-    return "tabla";
+    return "tablaPersona";
   }
 
-  @GetMapping("/new")
+  @GetMapping("/crearPersona")
   public String agregar(Model model){
     model.addAttribute("persona", new Persona());
     return "form";
   }
 
+  @GetMapping("/inicio")
+  public String inicio(){
+    return "index";
+  }
 
-  @PostMapping("/save")
+
+  @PostMapping("/savePersona")
   public String save(@Validated Persona p){
     service.save(p);
     return "redirect:/listar";
   }
 
-  @GetMapping("/editar/{id}")
+  @GetMapping("/editarPersona/{id}")
   public String editar(@PathVariable Long id, Model model){
     Optional<Persona> persona = service.listarId(id);
     model.addAttribute("persona", persona);
     return "form";
   }
 
-  @GetMapping("/eliminar/{id}")
+  @GetMapping("/eliminarPersona/{id}")
   public String delete(@PathVariable Long id){
     service.delete(id);
     return "redirect:/listar";
   }
-
-
 }
