@@ -24,7 +24,7 @@ public class MecanicoController {
   @GetMapping("/listarmecanico")
   public String listar(Model model){
     List<Mecanico> Mecanicos= service.listarMecanico();
-    model.addAttribute("Mecanicos", Mecanicos);
+    model.addAttribute("mecanicos", Mecanicos);
     return "tablamecanico";
   }
 
@@ -36,7 +36,7 @@ public class MecanicoController {
 
   @GetMapping("/newmecanico")
   public String agregar(Model model){
-    model.addAttribute("Mecanico", new Mecanico());
+    model.addAttribute("mecanico", new Mecanico());
     return "crearmecanico";
   }
 
