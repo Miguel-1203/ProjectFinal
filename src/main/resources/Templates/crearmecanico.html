@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
     <style>
@@ -36,7 +36,7 @@
         color: antiquewhite;
       }
     </style>
-  <title>Ingreso de vehuiculo</title>
+  <title>Document</title>
 </head>
 <body>
 
@@ -74,24 +74,20 @@
   </header>
 
   <div class="container">
-    <form th:action="@{/save}" th:object="${persona}" method="POST">
+    <form th:action="@{/savemecanico}" th:object="${mecanico}" method="POST">
       <div>
           <div>
               <div class="centrar" id="Color-letra">
-                  <h3 class="text-info-emphasis">INGRESO DE VEHICULO</h3>
+                  <h3 class="text-info-emphasis">INGRESO DE MECANICO</h3>
               </div>
               <div class="centrar">
                   <div>
-                      <label id="Color-letra" class="text-info-emphasis">ID</label>
-                      <input th:field="*{id}" type="number" class="form-control">
-                  </div>
-                  <div>
-                      <label id="Color-letra" class="text-info-emphasis">PROPIETARIO</label>
+                      <label id="Color-letra" class="text-info-emphasis">NOMBRE</label>
                       <input th:field="*{name}" type="text" class="form-control">
                   </div>
                   <div>
-                      <label id="Color-letra" class="text-info-emphasis" >TELEFONO</label>
-                      <input th:field="*{cell}" type="number" class="form-control">
+                      <label id="Color-letra" class="text-info-emphasis" >ESPECIALIDAD</label>
+                      <input th:field="*{especialidad}" type="text" class="form-control">
                   </div>
               </div>
               <div class="d-grid gap-2">
@@ -101,8 +97,6 @@
       </div>
   </form>
   </div>
-
- 
   
 </body>
 </html>

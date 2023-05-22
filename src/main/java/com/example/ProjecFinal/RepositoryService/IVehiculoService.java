@@ -13,7 +13,7 @@ public interface IVehiculoService {
   public List<Vehiculo> listarcoche();
   public Optional<Vehiculo> listarIdcoche(Long id);
   public int savecoche (Vehiculo v);
-  public void deletecoche (Long id);
 
+  public void deletecoche (Long id);
 
 }

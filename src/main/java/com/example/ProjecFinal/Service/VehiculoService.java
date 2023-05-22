@@ -1,6 +1,5 @@
 package com.example.ProjecFinal.Service;
 
-import com.example.ProjecFinal.Model.Persona;
 import com.example.ProjecFinal.Model.Vehiculo;
 import com.example.ProjecFinal.Repository.IVehiculo;
 import com.example.ProjecFinal.RepositoryService.IVehiculoService;

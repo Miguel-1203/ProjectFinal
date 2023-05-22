@@ -1,7 +1,6 @@
 package com.example.ProjecFinal.Service;
 
 import com.example.ProjecFinal.Model.Mecanico;
-import com.example.ProjecFinal.Model.Persona;
 import com.example.ProjecFinal.Repository.IMecanico;
 import com.example.ProjecFinal.RepositoryService.IMecanicoService;
 import org.springframework.beans.factory.annotation.Autowired;
